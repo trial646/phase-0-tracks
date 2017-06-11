@@ -9,4 +9,4 @@
 <button type> specifies the type of button
 <action> declares what will appear next after the form is submitted
 <select> make a fixed number of options within a form
-<text area>
+<text area> empty form area where user can type in their own text
