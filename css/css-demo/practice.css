@@ -1,18 +1,25 @@
-section#contact-info p {
-font size: .8em;
+#contact-info p {
+    font-size: .8em;
 }
 
 .job {
     background-color: #e9e5dc ;
-    border-radius:25px;
+    border-radius:10px;
     padding-right:25px ;
     padding-bottom: 5px;
     padding-left: 25px;
     margin: 35px;
 }
 
-.achievements {
+ul :hover {
     font-size: .8em;
+    color: red;
 }
 
+ul > li.featured {
+    color:#DAA520 ;
+}
 
+section > p.phone {
+    color: blue;
+}
