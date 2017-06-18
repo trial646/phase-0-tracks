@@ -37,22 +37,44 @@ body {
 }
 
 section#external-links {
-  width: 20%;
-  display: inline-block;
-  vertical-align: text-top;
+  width: 30%;
+  float: left;
 }
 
 main {
-  width: 80%;
-  display: inline-block;
-  vertical-align: text-top;
+  width: 70%;
+  float: left;
 }
 
-/* this turns the background hot pink when screen narrows to 500 px
-
-@media screen and (max-width: 500px) {
-  body {
-    background-color: hotpink;
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 50%;
   }
+
+  section#external-links {
+  width: 30%;
+  float: none;
+  font-size: .5em;
+  }
+
+  main {
+  width: 70%;
+  float: none;
+  font-size: .5em;
+  }
+
 }
-*/
+@media screen and (max-width: 400px) {
+
+  section#external-links {
+  width: 30%;
+  float: none;
+  }
+
+main {
+  width: 70%;
+  float: none;
+  }
+
+}
+
