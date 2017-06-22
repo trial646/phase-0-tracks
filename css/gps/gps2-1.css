@@ -28,3 +28,5 @@ footer {
   background-color: green;
   /* clear: both; */
 }
+
+/* Reflections: had opportunity to explore verticle align: top with inline block versus float - with verticle-align being useful in more cases. Overall felt good with these concepts */
