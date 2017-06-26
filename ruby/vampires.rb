@@ -3,30 +3,68 @@ applicant_name = #{name}
   puts "what is your name"
   name = gets.chomp
 
-def applicant_age
+def age_correct
   puts "what is your age"
   age = gets.chomp.to_i
   puts "what year were you born"
   birth_year = gets.chomp.to_i
-  if 2017-birth_year == age
+if 2017-birth_year == age
+  age_correct = TRUE
   puts "birth year approved"
 else
-  puts "vampire suspect"
+  age_correct = FALSE
+  puts "birth year incorrect"
+
 end
 
 end
-applicant_age
+age_correct
 
+def garlic_OK
 likes_garlic = #{garlic_preference}
   puts "Would you like garlic bread? y/n"
   garlic_preference = gets.chomp
+if garlic_preference == "y"
+  garlic_OK = TRUE
+else
+  garlic_OK = FALSE
+  puts "does not like garlic"
 
+end
+end
+garlic_OK
+
+def insurance_need
 health_insurance = #{insurance_preference}
-  puts "would you like health insurance"
+  puts "would you like health insurance y/n"
   insurance_preference = gets.chomp
+if insurance_preference == "y"
+  insurance_need = TRUE
+else
+  insurance_need = FALSE
+  puts "does not need insurance"
 
-  #age right, willing to eat garlic bread OR sign up for insurance, result is “Probably not a vampire.”
-  #If age wrong, AND hates garlic bread OR waives insurance, the result is “Probably a vampire.”
-  #If age wrong, hates garlic bread, and doesn’t want insurance, the result is “Almost certainly a vampire.”
-  #Even if the employee is an amazing liar otherwise, anyone going by the name of “Drake Cula” or “Tu Fang” is clearly a vampire, because come on. In that case, you should print “Definitely a vampire.”
-  #Print the result at the end of the survey.
+end
+
+end
+insurance_need
+
+#if (garlic_OK || insurance_need) && age_correct
+  #puts "probably not a vampire"
+#end
+
+# this first conditional code runs properly but loops back to garlic question,  as though the conditional statement is calling the method, (it did not do this when the true conditions were actually written out as having a value of = True)
+
+# The following represents the rest of the conditional statements as I would have written them:
+
+#elsif
+#(garlic_OK=FALSE || insurance_need=FALSE) && age_correct=FALSE
+  #puts "probably a vampire"
+  #elsif
+  #age_correct = FALSE && garlic_OK = FALSE && insurance_need = FALSE
+  #puts "Almost certainly a vampire"
+  #elsif
+  #name == "Drake Cula" || name = "Tu Fang"
+  #puts "Definitely a vampire"
+#end
+#
