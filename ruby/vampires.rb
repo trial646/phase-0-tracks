@@ -1,3 +1,6 @@
+Applicant_count = #{number_of_applications}
+  puts "How many employees will be processed"
+  number_of_applications = gets.chomp.to_i
 
 applicant_name = #{name}
   puts "what is your name"
@@ -43,11 +46,19 @@ if insurance_preference == "y"
 else
   insurance_need = FALSE
   puts "does not need insurance"
-
 end
 
 end
 insurance_need
+
+suspicious_allergies = #{allergies}
+puts "do you have an allergies? Please list them by name and write done when completed."
+allergies = gets.chomp
+
+while allergies != "done"
+  puts "do you have an allergies? Please list them by name and write done when completed."
+  allergies = gets.chomp
+end
 
 #if (garlic_OK || insurance_need) && age_correct
   #puts "probably not a vampire"
@@ -67,4 +78,11 @@ insurance_need
   #name == "Drake Cula" || name = "Tu Fang"
   #puts "Definitely a vampire"
 #end
-#
+
+Applicant_count = number_of_applications - 1
+
+#Until
+  #Applicant_count = number_of_applications
+  #applicant_name = #{name}
+#end
+#not sure what condition to name here / what and how to assign a value to the whole survey. Keep getting error message here: (repl):61: syntax error, unexpected keyword_end, expecting end-of-input
