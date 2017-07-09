@@ -4,7 +4,7 @@
 
 def encrypt(password)
 index = 0
-password = "swordfish"
+#password = "swordfish"
 
 while index < password.length
   puts password[index].next
@@ -17,19 +17,20 @@ end
 end
 end
 
-def decrypt(password2)
+def decrypt(password)
 index = 0
-password2 = "swordfish"
+#password = "swordfish"
 alphabet = "abcdefghijklmnopqrstuvwxyz"
 
-while index < password2.length
-  p password2[index] = alphabet[index - 1]
+while index < password.length
+  p password[index] = alphabet[index - 1]
 #so that index 0 of password2 = index -1 in alphabet
   index += 1
 end
 end
 
-p decrypt(encrypt("swordfish"))
+#p decrypt(encrypt("swordfish"))
+
 
 p "Would you like to encrypt of decrypt"
 encypt_or_decrypt = gets.chomp
@@ -52,4 +53,8 @@ Write conditional if encrypt then p encrypt(password)
 else p decrypt(password)
 Conducts the requested operation, prints the result to the screen, and exits/abort
 =end
-=begin I was unable to create a conditional that prevented encyrpt "zed" from returning two 'a''s in "aafe". I also was unable to prevent "z" from always returning as the first letter in decrypt due to using [index - 1] in the method definition which on the alphabet string always returns z. Lastly the release 5 program runs but the decrypt else conditional does not function the same way as when it was run on its own. It still leads with z but otherwise almost seems to be returning jumping three back to the prior three letters of the alphabet rather than moving each letter back by one letter. =end
+
+
+=begin
+I was unable to create a conditional that prevented encyrpt "zed" from returning two 'a''s in "aafe". I also was unable to prevent "z" from always returning as the first letter in decrypt due to using [index - 1] in the method definition which on the alphabet string always returns z. Lastly the release 5 program runs but the decrypt else conditional does not function the same way as when it was run on its own. It still leads with z but otherwise almost seems to be returning jumping three back to the prior three letters of the alphabet rather than moving each letter back by one letter.
+=end
