@@ -58,7 +58,7 @@ fido.dog_years(2)
 
 fido.sit
 
-
+# Release 2 building our own class
 
 class Harry_Potter_Characters
 
@@ -74,9 +74,8 @@ class Harry_Potter_Characters
     puts "Your house is #{house}"
   end
 
-end
 
-# Release 2 making our own class
+end
 
   Hermione = Harry_Potter_Characters.new
   Hermione.instance_of?(Harry_Potter_Characters)
@@ -86,25 +85,36 @@ end
   Ron.spell
   Hermione.sort("Griffendor")
 
+
+harry_instances = []
+until harry_instances.length == 50
+harry_instances << Harry_Potter_Characters.new
+
+end
+
+
+
+harry_instances.each do |student|
+  student.spell
+  student.sort("gryffendor")
+end
+
 =begin
 index = 0
-until index == 50
-index = Harry_Potter_Characters.new
-
+while harry_instances.length > 50
+harry_instances << Harry_Potter_Characters.new
 index += 1
 end
 
+end
 =end
+#make_characters
 
-#do
 
-  #student = 50.times.collect {|name| Harry_Potter_Characters.new(name) }
-  #array = number of times to do it .times (built in method).collect (shoves result into an array) {Name of class.new making new class (number of times to do it)
+#first is the creation of the array
+#the first element is and instance and is named after the index number
 
-#accounts = 100.times.collect { |i| eval("B#{i} = BankAccount.new(100)") }
-# student = 50.times.collect { |i| eval("student#{i} = #{Harry_Potter_Characters.new(50)}") }
-
-#Create loop that circles through creating instances - does it 50 times
-#create the instances
-
-# class instances do not have a built in iterative function. So to get them to iterate we might create a method that creates a class instance and then pushes it into an array. Then that array can count each time it has had a class added to it or just an element added to it (which in list case is a class)
+=begin
+class instances do not have a built in iterative function. So to get them to iterate we might create a method that creates a class instance and then pushes it into an array. Then that array can count each time it has had a class added to it or just an element added to it (which in list case is a class).
+So step 1 would to declare an index that is at 0. then a counter with index += 1. step 2 would be make an array. step 3 would be to create an element in that array that is a class and has a name that includes its index number.
+=end
