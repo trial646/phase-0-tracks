@@ -1,6 +1,6 @@
-
 # Goals: passing data between different methods and solidify how methods can interact with one another
 
+# RELEASE 1
 # Method to create a list
 # input: string of items separated by spaces (example: "carrots apples cereal pizza")
 # steps:
@@ -65,4 +65,48 @@ groceries.each do |key_and_value|
   p key_and_value
 end
 
+#RELEASE 2
+# Create a new list.
+# Add the following items to your list.
+# Lemonade, qty: 2
+# Tomatoes, qty: 3
+# Onions, qty: 1
+# Ice Cream, qty: 4
+# Remove the Lemonade from your list.
+# Update the Ice Cream quantity to 1
+# Print out your list (Is this readable and nice looking)?
+# If any of your methods didn't work as expected, go back and fix them. Make sure the code works as expected before moving on.
 
+second_list = {}
+
+products = ["lemonade", "tomatoes", "onions", "ice_cream"]
+item_quantities = ["2", "3", "1", "4"]
+
+products.each do |product|
+   second_list.store(product, 1)
+   end
+
+p second_list
+
+# item_quantities.each do |quantity|
+#   second_list.store(products, quantity)
+# end
+
+# p second_list
+# I cound not get a dry iterative way of assigning the quantities as values in the hash to run
+
+change_quantity = "lemonade"
+second_list[change_quantity] = 2
+change_quantity = "tomatoes"
+second_list[change_quantity] = 3
+change_quantity = "ice_cream"
+second_list[change_quantity] = 4
+p second_list
+
+change_quantity = "ice_cream"
+second_list[change_quantity] = 1
+p second_list
+
+
+products.delete("lemonade")
+p products
