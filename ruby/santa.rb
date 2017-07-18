@@ -82,33 +82,35 @@ p pudgy.age
 # age did not run even though I tried to assign age to new_age in line 27
 end
 
+#RELEASE 4
 santas2 = []
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
 example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 example_genders.length.times do |i|
  #santas2 << Santa.new(example_genders, example_ethnicities)
- p i
+ p i 
 end
 
 def test_random(gender, ethnicity)
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
-example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]  
 
-p example_genders.sample
-p example_ethnicities.sample
-end
+p example_genders.sample 
+p example_ethnicities.sample 
+end 
 
 50.times do
 santas2 << Santa.new(example_genders.sample, example_ethnicities.sample)
-end
+end 
 p santas2
 
 
-# Use the #sample method on the array to get it to return a random option for gender. done
-#Do the same for ethnicity. done
-# Get the arrays to do the same for both at the same time. done
-# Write a loop block that runs 50 times.
-# It should take the genders and ethnicities arrays as arguements.
-# It should use the values in those arrays to build a new santa instance every time the loop runs.
-# For each time it is run, instead of going through each array element in turn (.each), make the array output a random value from each array.
+# Use the #sample method on the array to get it to return a random option for gender. done 
+#Do the same for ethnicity. done 
+# Get the arrays to do the same for both at the same time. done 
+# Write a loop block that runs 50 times. 
+# It should take the genders and ethnicities arrays as arguements. 
+# It should use the values in those arrays to build a new santa instance every time the loop runs. 
+# For each time it is run, instead of going through each array element in turn (.each), make the array output a random value from each array. 
+
 
