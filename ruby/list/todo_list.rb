@@ -1,6 +1,5 @@
 class TodoList
 
-
   def initialize(items)
 
 
