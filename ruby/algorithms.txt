@@ -1,0 +1,25 @@
+Robot Elevator Algorithm
+
+- input home_floor with value 25
+- homefloor value is called when 'take elevator home' command issued
+- if 'in elevator' = false, locate elevator button
+- if 'elevator button located' = true, push elevator button
+- until 'elevator doors open' = true, wait for elevator
+- when 'elevator doors open' enter elevator
+- if entered elevator = true, call home_floor
+- if home floor button pushed = false, push button marked with home_floor number and wait
+- elsif, floor button pushed = true, wait for elevator button pushed to be false again, then exit elevator after doors open
+
+Open door algorithm
+- locate keys in pocket
+- if keys in pocket = true, take out keys from pocket
+else locate keys in bag. if keys in bag = true, take out keys from bag
+- select correct key for door by matching key shape to door type
+- search key options until key shape matches door type.
+- insert correct key shape into door lock
+- if key fits, turn right once
+- if turn right once = true, turn knob and push door
+- walk through door
+- close door
+
+
