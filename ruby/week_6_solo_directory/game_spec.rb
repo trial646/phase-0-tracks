@@ -10,9 +10,14 @@ require_relative 'guess_game'
 describe do
   #let(:list) { TodoList.new(["do the dishes", "mow the lawn"]) }
 
-  it "test states hello world " do
-    expect(test_statement).to eq "hello world"
+  it "takes the secret word input and prints it" do
+    list.add_item("mop")
+    expect(input_secret("fun")).to eq ["fun"]
   end
+
+  # it "prints a string of dashes the same number in length as the secret word " do
+  #   expect(test_statement).to eq "hello world"
+  # end
 
   # it "adds an item to the list" do
   #   list.add_item("mop")
