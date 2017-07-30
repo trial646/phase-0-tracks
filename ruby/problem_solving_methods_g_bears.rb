@@ -58,7 +58,7 @@ arr << arr[i] + arr[i + 1]
   # b = a + 1
   # c = a + b
   # arr << c
-  #a = c this assignment is happening inside a while loop. But its being reassigned back 1 at the start of the loop. I need a variable instead of hard coding it in.
+  #a = c this assignment is happening inside a while loop. But its being reassigned back 1 at the start of the loop. I need a variable instead of hard coding it in..
   i += 1
 end
   p arr
