@@ -87,8 +87,6 @@ i = 1
     #i += 1
 end
 end
-#       #variable can be used for first arguement here but dont make it be the value at that index as expressed by a number in brackets, just the actual integer of the index value or a variable
-#
 #     #its trying to turn an array into an integer for some reason...
 #     #move arr[i] back one index position
 #   i += 1
