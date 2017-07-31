@@ -66,3 +66,49 @@ end
 
 
 fib(4)
+
+# Release 2 - Creating a sorting algorithm
+
+#First version
+arr = [12, 5, 1, 7]
+
+i = 1
+#while i < arr.length
+  if arr[i] < arr[i - 1]
+    moved_num = arr[i]
+    #p arr[i - 1]
+
+  #end
+    arr.unshift(moved_num)
+    #arr.insert(i - 1, moved_num)
+
+    arr.delete(arr[i+1])
+    p arr
+    #i += 1
+end
+end
+#     #its trying to turn an array into an integer for some reason...
+#     #move arr[i] back one index position
+#   i += 1
+# end
+# p arr
+# end
+
+#second version
+i = 1
+
+arr = [12, 5, 1, 7]
+i = 1
+until i == arr.length * 2
+  arr.each do |item|
+    if arr[i] < arr[i - 1]
+      move_num = arr[i]
+      p move_num
+      arr.unshift(move_num)
+      #p arr
+      i += 1
+    end
+  end
+end
+
+#
