@@ -40,10 +40,14 @@ secret_word = gets.chomp
 puts "Player 1's secret word has #{secret_word.length} letters."
 p blank_spaces = "-" * secret_word.length
 
-until game.guess_count == secret_word.length
+until game.attempts_arr.length == secret_word.length
 puts "Player 2, guess a letter"
 guess_attempt = gets.chomp
+
+# if the letter is already in the guess array from a previous attempt, if we do not add it to the array again and change the until statement to be game.attempts_arr and secret word are equal in length then game ends?
+if game.attempts_arr.include?(guess_attempt) == false
 game.attempts_arr << guess_attempt
+end
 p game.attempts_arr
 
 
@@ -52,17 +56,11 @@ p game.attempts_arr
     blank_spaces[blank_fill] = guess_attempt
     p blank_spaces
   else
-    puts "Nope, sorry that is incorrect. Try again!"
+    puts "Nope, sorry that is incorrect. You have #{secret_word.length - game.attempts_arr.length} chances remaining!"
   end
-game.guess_count += 0
-
-if game.attempts_arr.include?(guess_attempt)
-  then
-  game.guess_count -= 1
-end
 
 
-  if game.guess_count == secret_word.length && secret_word != blank_spaces
+  if game.attempts_arr.length == secret_word.length && secret_word != blank_spaces
   puts " You are out of guesses. Boo Hoo. The secret word was '#{secret_word}'."
   elsif
   secret_word == blank_spaces
