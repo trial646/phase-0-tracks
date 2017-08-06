@@ -45,7 +45,7 @@ puts "Player 2, guess a letter"
 guess_attempt = gets.chomp
 game.attempts_arr << guess_attempt
 p game.attempts_arr
-#game.guess_letter
+
 
   if secret_word.include?(guess_attempt)
   blank_fill = secret_word.index(guess_attempt)
