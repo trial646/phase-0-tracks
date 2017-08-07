@@ -68,3 +68,29 @@ p game.attempts_arr
   end
 
 end
+
+# Here is my second attempt to write the game code with class methods to control game behaviors rather than just user facing driver code outside class definition.
+
+# class Game
+#   attr_accessor :secret_word, :guess_word, :guess_letter
+
+#   def initialize
+#     @secret_word = ''
+#     @guess_word = []
+#     @game_over = false
+#     @total_attempts = 0
+#     @guess_letter = ''
+#   end
+
+#   def secret_word_blanks
+#     @secret_word_blanks = '-' * @secret_word.length
+#   end
+
+#   def add_guess_letter
+#     if secret_word.include?(guess_letter)
+#     blank_fill = secret_word.index(guess_attempt)
+#     guess_word[blank_fill] = guess_letter
+#     @total_attempts += 1
+#   end
+
+# end
