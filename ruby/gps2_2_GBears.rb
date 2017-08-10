@@ -68,123 +68,183 @@
 #RELEASE 1 - Second pass
 # Method to create a list
 
-def make_list(list_str)
-groceries = {}
-ingredients = list_str.split
-#p groceries
-p ingredients
 
-ingredients.map do |arr_items|
-  groceries.store(arr_items, 1)
+
+def make_list(list_str, hash)
+  #list_hash = {} should I define this outside of the method in the driver code so that it is has global scope? Is that valid or is that clogging the global scope? Or making the code less flexible because I am hard coding the name of the data structure?
+  list_items_arr = list_str.split
+
+
+  list_items_arr.map do |arr_items|
+
+  hash.store(arr_items, 1)
+  end
+
+  #p list_hash
 end
-p groceries
 
-end
 
-#make_list("eggs rice milk cereal")
+# this runs because the hash parameter has been satisfied with list hash (previously defined on line 86) as the aruement. Feeding it in as an argument is how you get methods to communicate with each other accross scope differences. You dont have to hard code the defined variables in, you can make them be represented by a parameter and then use the driver code to run it.
+
 
 # # Method to add an item to a list
 
-def add_item(new_item)
-groceries = make_list("eggs rice milk cereal")
-groceries[new_item] = 1
-p groceries
+# def add_item(new_item)
+# groceries = make_list("eggs rice milk cereal")
+# groceries[new_item] = 1
+# p groceries
+# end
+
+def add_item(hash, new_item, quantity= 1)
+  hash[new_item] = quantity
 end
 
-#groceries = add_item("cheese")
 
-# Method to remove an item from the list
 
-def remove_item(removed_item)
-groceries = add_item("cheese")
-#removed_item = "eggs"
-groceries.delete(removed_item)
-p groceries
+
+
+
+# # Method to remove an item from the list
+
+# def remove_item(removed_item)
+# groceries = add_item("cheese")
+# #removed_item = "eggs"
+# groceries.delete(removed_item)
+# p groceries
+# end
+
+# #groceries = remove_item("eggs")
+
+def remove_item(hash, removed_item)
+  hash.delete(removed_item)
 end
 
-#groceries = remove_item("eggs")
 
-# Method to update the quantity of an item
-def update_item(updated_item)
-#update_item = "bacon"
-groceries = remove_item("eggs")
-groceries[updated_item] = 3
-p groceries
+
+
+# # Method to update the quantity of an item
+# def update_item(updated_item)
+# #update_item = "bacon"
+# groceries = remove_item("eggs")
+# groceries[updated_item] = 3
+# p groceries
+# end
+
+# #groceries = update_item("bacon")
+
+def update_item(hash, updated_item, quantity)
+  hash[updated_item] = quantity
 end
 
-#groceries = update_item("bacon")
 
-# Method to print a list and make it look pretty
-def print_groceries
-groceries = update_item("bacon")
-groceries.each do |key_and_value|
-  p key_and_value
-end
-end
 
-print_groceries
 
-#RELEASE 2
-# Create a new list.
-# Add the following items to your list.
-# Lemonade, qty: 2
-# Tomatoes, qty: 3
-# Onions, qty: 1
-# Ice Cream, qty: 4
-# Remove the Lemonade from your list.
-# Update the Ice Cream quantity to 1
-# Print out your list (Is this readable and nice looking)?
-# If any of your methods didn't work as expected, go back and fix them. Make sure the code works as expected before moving on.
 
-second_list = {}
+# # Method to print a list and make it look pretty
+# def print_groceries
+# groceries = update_item("bacon")
+# groceries.each do |key_and_value|
+#   p key_and_value
+# end
+# end
 
-products = ["lemonade", "tomatoes", "onions", "ice_cream"]
-item_quantities = ["2", "3", "1", "4"]
+# print_groceries
 
-products.each do |product|
-  second_list.store(product, 1)
+# make_list("eggs rice milk cereal", )
+# p add_item(list_hash, "steak")
+
+def print_list(hash)
+  hash.each do |item, quantity|
+    p "The grocery item is #{item}, the quantity is #{quantity}"
   end
+end
 
-p second_list
+list_hash = {}
+make_list("apples banana", list_hash)
+add_item(list_hash, "bacon", 5)
+remove_item(list_hash, "banana")
+update_item(list_hash, "bacon", 3)
+print_list(list_hash)
 
-# item_quantities.each do |quantity|
-#   second_list.store(products, quantity)
+
+
+# #RELEASE 2
+# # Create a new list.
+# # Add the following items to your list.
+# # Lemonade, qty: 2
+# # Tomatoes, qty: 3
+# # Onions, qty: 1
+# # Ice Cream, qty: 4
+# # Remove the Lemonade from your list.
+# # Update the Ice Cream quantity to 1
+# # Print out your list (Is this readable and nice looking)?
+# # If any of your methods didn't work as expected, go back and fix them. Make sure the code works as expected before moving on.
+
+# second_list = {}
+
+# products = ["lemonade", "tomatoes", "onions", "ice_cream"]
+# item_quantities = ["2", "3", "1", "4"]
+
+# products.each do |product|
+#   second_list.store(product, 1)
+#   end
+
+# p second_list
+
+# # item_quantities.each do |quantity|
+# #   second_list.store(products, quantity)
+# # end
+
+# # p second_list
+# # I cound not get a dry iterative way of assigning the quantities as values in the hash to run
+
+# change_quantity = "lemonade"
+# second_list[change_quantity] = 2
+# change_quantity = "tomatoes"
+# second_list[change_quantity] = 3
+# change_quantity = "ice_cream"
+# second_list[change_quantity] = 4
+# p second_list
+
+# change_quantity = "ice_cream"
+# second_list[change_quantity] = 1
+# p second_list
+
+
+# products.delete("lemonade")
+# p products
+
+
+food_list = {}
+add_item(food_list, "Lemonade", 2)
+add_item(food_list, "Tomatoes", 3)
+add_item(food_list, "Onions")
+add_item(food_list, "Ice_cream", 4)
+remove_item(food_list, "Lemonade")
+update_item(food_list, "Ice_cream", 1)
+print_list(food_list)
+
+ingredients = ["Lemonade", "Tomatoes", "Onions", "Ice_cream"]
+ingredient_quantity = [2, 3, 1, 4]
+new_list = ingredients.zip(ingredient_quantity)
+p new_list
+p Hash[new_list]
+
+# # RELEASE 3 REFACTOR
+
+# # Created iterative solution to updating quantity!
+# second_list = {}
+
+# products = ["lemonade", "tomatoes", "onions", "ice_cream"]
+# item_quantities = ["2", "3", "1", "4"]
+
+# arr_of_foods = products.zip(item_quantities)
+
+
+# arr_of_foods.each do |pair_item1, pair_item2|
+# second_list.store(pair_item1, pair_item2)
 # end
 
 # p second_list
-# I cound not get a dry iterative way of assigning the quantities as values in the hash to run
-
-change_quantity = "lemonade"
-second_list[change_quantity] = 2
-change_quantity = "tomatoes"
-second_list[change_quantity] = 3
-change_quantity = "ice_cream"
-second_list[change_quantity] = 4
-p second_list
-
-change_quantity = "ice_cream"
-second_list[change_quantity] = 1
-p second_list
-
-
-products.delete("lemonade")
-p products
-
-# RELEASE 3 REFACTOR
-
-# Created iterative solution to updating quantity!
-second_list = {}
-
-products = ["lemonade", "tomatoes", "onions", "ice_cream"]
-item_quantities = ["2", "3", "1", "4"]
-
-arr_of_foods = products.zip(item_quantities)
-
-
-arr_of_foods.each do |pair_item1, pair_item2|
-second_list.store(pair_item1, pair_item2)
-end
-
-p second_list
 
 
