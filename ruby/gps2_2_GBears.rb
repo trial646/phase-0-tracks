@@ -84,7 +84,7 @@ def make_list(list_str, hash)
 end
 
 
-# this runs because the hash parameter has been satisfied with list hash (previously defined on line 86) as the aruement. Feeding it in as an argument is how you get methods to communicate with each other accross scope differences. You dont have to hard code the defined variables in, you can make them be represented by a parameter and then use the driver code to run it.
+# this runs because the hash parameter has been satisfied with list hash (previously defined on line 86 now on 162) as the argument. Feeding it in as an argument is how you get methods to communicate with each other accross scope differences. You dont have to hard code the defined variables in, you can make them be represented by a parameter and then use the driver code to run it.
 
 
 # # Method to add an item to a list
