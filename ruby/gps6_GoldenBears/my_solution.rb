@@ -84,9 +84,12 @@ attr_accessor :population_density, :population, :state
 # This code is saying as the population density goes down to under 200 (per sq mile) the speed of spread goes up. For every 50 people the density decreases by, the speed of spread goes down by .5 (of a month). Sort of like if density += 50, speed +=.5.
 
 #Could we do something like (this code as written wont run but this is the logic):
- # if @population_density -= 50
-    #   speed += 0.5
-    # end
+ until @population_density == 200
+  if @population_density -= 50 #why does this decrease the number?
+      speed += 0.5
+    end
+
+# modulo
 
     puts " and will spread in #{speed} months.\n\n"
 
