@@ -9,10 +9,11 @@ for (var i = str.length; i >= 0; i -= 1) {
 var str = "salutations!"
 
 
-// to assign the output to a variable will I need to somehow assign each individual letter to a string?
-// Or contain this while loop inside of a function and assign that entire function to a variable like below? And then run var nameAssignment = str.reverse?
 
-// how will I shove indiviual letter into one string? I do not want to  initialize it as a string
+// At first I contained this while loop inside of a function and assigned that entire function to a variable like below. And then ran var nameAssignment = str.reverse. But that threw an error.
+
+// Instead I assigned a variable OUTSIDE of the function that was an empty string. Then to shove indiviual letter into that string I just added it with the var name += and then the operation that iterated over each letter in the original str string that was being reversed. Noted that I had to do the variable assignment step inside of the same step/line of code in the method that changed each letter. Otherwise I end up only assigning the last letter of the loop because it would reassign again and again each time the loop is run.
+
 // console for debug only
 
 var backwards = ''
@@ -28,14 +29,7 @@ reverse()
 console.log(backwards)
 
 
-
-
-// for (var i = str.length; i >= 0; i -= 1) {
-//   var backwards = console.log(str[i]);
-// }
-
-
-// console.log(backwards)
-
-// if (1 == 1)
-//   console.log(backwards)
+if (1 === 1) {
+  reverse()
+console.log(backwards)
+}
