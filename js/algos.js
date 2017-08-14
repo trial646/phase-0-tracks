@@ -1,8 +1,5 @@
 //RELEASE O
 
-// In algos.js, write a function that takes an array of words or phrases and returns the longest word or phrase in the array. So if we gave your function the array of ["long phrase","longest phrase","longer phrase"], it would return "longest phrase". This is a logical reasoning challenge, so try to reason through this based on what you already know, rather than Googling the fanciest solution or looking up built-in sorting functions. Note that "some string".length will do what you expect in JS.
-// Add driver code that tests your function on a few arrays.
-
 // create a function that takes an array as a parameter. Set up an iteration that goes through each element in the array by incrementing through its index values.-
 //Measure the length of each object
 //shove the number value of each length into a new array as a collection of integers each with the same index value as its matching array word
@@ -30,3 +27,57 @@ var printout = []
     }
   }
 longestWords(arr)
+
+var flowers = ["roses", "tulips","daisies"]
+console.log(longestWords(flowers))
+
+//RELEASE 1
+
+// These both return true because at least one key-value pair matches between the two objects.
+// If no pairs match (and keep in mind that the two objects may not even have any of the same keys), the function should return false. To make your life easier, don't worry about whether a property is a string ('age') or an identifier name (age). Those can be considered equivalent.
+// Again, try to reason through the problem using the basics you've already learned, rather than looking up slick search functions that will do the job for you. We'd rather see you write code that you actually understand!
+
+// split the first object's keys into an array. Then its values (#keys,#values)
+// merge the two sets of arrays into one long array of keys and values ()
+// repeat the process for the second object
+// run a loop on the array
+// if hash 1 [i] === hash 2[i] return hash 1 [i]
+
+var toolKit = {"hammer": 3, "screwdriver": 2, "tape measure": 1}
+var hardwareStore = {"sandpaper": 10, "wrenches": 7, "hammer": 2}
+var toolkitArr = []
+var hardwareStoreArr = []
+
+var toolkitArr = Object.keys(toolKit)
+toolkitArr.push(Object.values(toolKit))
+toolkitArr1 = []
+
+for (var i = 0; i < toolkitArr.length; i+= 1)
+{
+  toolkitArr1 = toolkitArr1.concat(toolkitArr[i])
+}
+
+console.log(toolkitArr1)
+// ********
+
+var hardwareStoreArr = Object.keys(hardwareStore)
+hardwareStoreArr.push(Object.values(hardwareStore))
+hardwareStoreArr1 = []
+
+for (var i = 0; i < hardwareStoreArr.length; i+= 1)
+{
+  hardwareStoreArr1 = hardwareStoreArr1.concat(hardwareStoreArr[i])
+}
+
+console.log(hardwareStoreArr1)
+
+function matchingItems() {
+for (var i = 0; i < toolkitArr.length; i+= 1) {
+  if toolkitArr1[i] === hardwareStoreArr1[i];
+    return toolkitArr1[i]
+}
+
+}
+
+console.log matchingItems()
+
