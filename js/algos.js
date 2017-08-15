@@ -85,20 +85,39 @@ console.log(matchingItems())
 
 //RELEASE 2
 
+//RELEASE 2
+
 function randomWord() {
   var str = ''
+  var strArr = []
   var letters = "abcdefghijklmnopqrstuvwxyz"
   var length = Math.floor(Math.random() * 10)
-
+  var newstr = ''
   for (var i = 0; i < length; i+= 1) {
-  str += (letters.charAt(Math.floor(Math.random() * 10)))
-
+  newstr = str += (letters.charAt(Math.floor(Math.random() * 10)))
   }
-  console.log(str)
+  strArr.push(newstr)
+  console.log(strArr)
 }
 
-randomWord()
+//randomWord()
 
+function wordBox(int) {
+  var wordArr = [];
+  //var allArr = []
+  {for (var i = 0; i < int; i+= 1)
+  console.log(wordArr = randomWord());
+  //console.log(wordArr[i] = newWord);
+  //
+}
+  //allArr.concat(wordArr)
+
+}
+
+wordBox(4)
+
+
+// we need something that generates random words
 // define an empty string (which will soon contain your random word)
 //define a variable that contains an assortment of letters reflecting the alphabet as list of characters that can go into your random string
 //generate a random letter from the alphabet variable
@@ -106,9 +125,27 @@ randomWord()
 //repeat random letter generation and fill string in one letter at a time, random number (1 -10) of times
 
 
+// Next: we need something that generates a random word n number of time and puts them in an array
+// function takes input of n. it creates an array. It inserts n number of random words. it returns that array with the words in it.
 
-// Write a function that takes an integer for length, and builds and returns an array of strings of the given length. So if we ran your function with an argument of 3, we would get an array of 3 random words back (the words don't have to be actual sensical English words -- "nnnnfph" totally counts). The words should be of randomly varying length, with a minimum of 1 letter and a maximum of 10 letters. (This involves a new trick, generating a random number, that you'll have to look up, but the solution on how to do so is relatively straightforward.)
-// Add driver code that does the following 10 times: generates an array, prints the array, feeds the array to your "longest word" function, and prints the result.
+
+// take the random array of words generator, print it, then run the longestWords function on them and print result
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //declare a function, arrLength as param which will take a number
 //creates at array of arrLength number of empty strings: newArr = [<int number of strings here>]
