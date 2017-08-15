@@ -73,11 +73,55 @@ console.log(hardwareStoreArr1)
 
 function matchingItems() {
 for (var i = 0; i < toolkitArr.length; i+= 1) {
-  if toolkitArr1[i] === hardwareStoreArr1[i];
+  if (toolkitArr1[i] === hardwareStoreArr1[i]);
     return toolkitArr1[i]
 }
 
 }
 
-console.log matchingItems()
+console.log(matchingItems())
+
+// 2 iterations - iterate through object 1, then look at its property (key), the first one.
+
+//RELEASE 2
+
+function randomWord() {
+  var str = ''
+  var letters = "abcdefghijklmnopqrstuvwxyz"
+  var length = Math.floor(Math.random() * 10)
+
+  for (var i = 0; i < length; i+= 1) {
+  str += (letters.charAt(Math.floor(Math.random() * 10)))
+
+  }
+  console.log(str)
+}
+
+randomWord()
+
+// define an empty string (which will soon contain your random word)
+//define a variable that contains an assortment of letters reflecting the alphabet as list of characters that can go into your random string
+//generate a random letter from the alphabet variable
+//add that random letter to the empty string.
+//repeat random letter generation and fill string in one letter at a time, random number (1 -10) of times
+
+
+
+// Write a function that takes an integer for length, and builds and returns an array of strings of the given length. So if we ran your function with an argument of 3, we would get an array of 3 random words back (the words don't have to be actual sensical English words -- "nnnnfph" totally counts). The words should be of randomly varying length, with a minimum of 1 letter and a maximum of 10 letters. (This involves a new trick, generating a random number, that you'll have to look up, but the solution on how to do so is relatively straightforward.)
+// Add driver code that does the following 10 times: generates an array, prints the array, feeds the array to your "longest word" function, and prints the result.
+
+//declare a function, arrLength as param which will take a number
+//creates at array of arrLength number of empty strings: newArr = [<int number of strings here>]
+//creates random collections of letters for the empty strings inside of newArr
+//each word string should be of rand length
+//each word should be no longer than 10 letters
+// adds the words to the empty strings in the array (or adds the words to the array)
+//returns the array
+//OR
+//creates rand words * arrLength number of times
+//adds each of those words upon creation into an array
+
+//****
+
+//create a loop that does the following 10 times - generate a random array with the function above, print it, enter that array as a parameter in the longest word function from release 1, print the result
 
